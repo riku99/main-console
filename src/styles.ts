@@ -1,3 +1,3 @@
 export const styles = {
-  headerHeight: "7%",
+  headerHeight: "8vh",
 };

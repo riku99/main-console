@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Login } from "../pages/Login";
-import { Home } from "../pages/Home";
+import { Login } from "../components/pages/Login";
+import { Home } from "../components/pages/Home";
 import { Protected } from "./Protected";
-import { NotFound } from "pages/NotFound";
+import { NotFound } from "components/pages/NotFound";
 
 export const Routes = () => {
   return (

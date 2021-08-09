@@ -1,4 +1,4 @@
-import { MainLayout } from "components/templates/MainLayout";
+import { MainLayout } from "components/utils/MainLayout";
 
 export const Home = () => {
   return (

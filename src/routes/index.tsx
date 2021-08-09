@@ -7,21 +7,21 @@ import {
 import { Login } from "../pages/Login";
 import { Home } from "../pages/Home";
 import { Protected } from "./Protected";
+import { NotFound } from "../pages/NotFound";
 
 export const Routes = () => {
   return (
     <Router>
-      <Protected>
-        <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Redirect from="*" to="/home" />
-        </Switch>
-      </Protected>
-      <Route path="/login">
-        <Login />
-      </Route>
+      <Switch>
+        <Route path="/login" component={Login} />
+        <Protected>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/home" component={Home} />
+            <Route component={NotFound} />
+          </Switch>
+        </Protected>
+      </Switch>
     </Router>
   );
 };

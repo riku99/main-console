@@ -3,7 +3,6 @@ import { Box, Flex, useToast } from "@chakra-ui/react";
 import { useHistory } from "react-router-dom";
 import { GoogleLoginButton } from "react-social-login-buttons";
 
-import { MainLayout } from "../../utils/MainLayout";
 import { useLogin } from "../../../hooks/auth";
 
 export const Login = React.memo(() => {

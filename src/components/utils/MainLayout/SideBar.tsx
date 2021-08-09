@@ -7,12 +7,26 @@ import { IconType } from "react-icons";
 import { Link } from "react-router-dom";
 
 const MenuItem = React.memo(
-  ({ icon, title }: { icon: IconType; title: string }) => {
+  ({
+    icon,
+    title,
+    link,
+    seleceted,
+  }: {
+    icon: IconType;
+    title: string;
+    link: string;
+    seleceted: boolean;
+  }) => {
     return (
-      <Link to="/login">
-        <Center>
-          <Icon as={icon} color="white" />
-          <Text color="white" fontWeight="bold" ml={2}>
+      <Link to={link}>
+        <Center bg={seleceted ? "white" : undefined} borderRadius={20} p="5px">
+          <Icon as={icon} color={seleceted ? "blue.300" : "white"} />
+          <Text
+            color={seleceted ? "blue.300" : "white"}
+            fontWeight="bold"
+            ml={2}
+          >
             {title}
           </Text>
         </Center>
@@ -23,11 +37,11 @@ const MenuItem = React.memo(
 
 export const SideBar = React.memo(() => {
   return (
-    <Box h="100%" w="10%" bg="blue.300">
+    <Box h="100%" w="9%" bg="blue.300">
       <Center mt={styles.headerHeight} w="100%" display="block">
         <VStack spacing="20px">
-          <MenuItem icon={MdHome} title="ホーム" />
-          <MenuItem icon={MdHome} title="ホーム" />
+          <MenuItem icon={MdHome} title="ホーム" link="/home" seleceted />
+          <MenuItem icon={MdHome} title="ホーム" link="/" seleceted={false} />
         </VStack>
       </Center>
     </Box>

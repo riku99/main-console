@@ -1,3 +1,9 @@
+import { MainLayout } from "components/templates/MainLayout";
+
 export const Home = () => {
-  return <div>Hello Home</div>;
+  return (
+    <MainLayout>
+      <div>Hello Home</div>
+    </MainLayout>
+  );
 };

@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import firebase from "firebase";
 
-import { firebaseApp } from "../firebase";
+import { firebaseApp } from "../_firebase";
 
 export const useAuth = () => {
   const [user, loading, error] = useAuthState(firebaseApp.auth());

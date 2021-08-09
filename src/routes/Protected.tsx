@@ -1,5 +1,6 @@
 import React from "react";
 import { useAuth } from "../hooks/auth";
+import { Redirect } from "react-router-dom";
 
 type Props = {
   children: React.ReactNode;
@@ -13,8 +14,7 @@ export const Protected = React.memo(({ children }: Props) => {
   }
 
   if (!user) {
-    // ログイン画面にリダイレクト
-    return <div>protected</div>;
+    return <Redirect to="/login" />;
   }
 
   return <>{children}</>;

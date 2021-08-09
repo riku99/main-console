@@ -6,16 +6,16 @@ import { Protected } from "./Protected";
 export const Routes = () => {
   return (
     <Router>
-      <Switch>
-        <Protected>
-          <Route path="/login">
-            <Login />
-          </Route>
+      <Protected>
+        <Switch>
           <Route path="/">
             <Home />
           </Route>
-        </Protected>
-      </Switch>
+        </Switch>
+      </Protected>
+      <Route path="/login">
+        <Login />
+      </Route>
     </Router>
   );
 };

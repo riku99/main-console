@@ -31,14 +31,12 @@ export const Login = React.memo(() => {
   }, [loginWithGoogle, history, toast]);
 
   return (
-    <MainLayout>
-      <Flex justifyContent="center" alignItems="center" h="100%">
-        <Box w="30%">
-          <GoogleLoginButton onClick={onGoogleClick}>
-            <span>Googleでログイン</span>
-          </GoogleLoginButton>
-        </Box>
-      </Flex>
-    </MainLayout>
+    <Flex justifyContent="center" alignItems="center" h="100vh" bg="gray.200">
+      <Box w="30%">
+        <GoogleLoginButton onClick={onGoogleClick}>
+          <span>Googleでログイン</span>
+        </GoogleLoginButton>
+      </Box>
+    </Flex>
   );
 });

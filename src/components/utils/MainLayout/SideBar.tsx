@@ -4,16 +4,19 @@ import { styles } from "styles";
 import { Icon } from "@chakra-ui/react";
 import { MdHome } from "react-icons/md";
 import { IconType } from "react-icons";
+import { Link } from "react-router-dom";
 
 const MenuItem = React.memo(
   ({ icon, title }: { icon: IconType; title: string }) => {
     return (
-      <Center>
-        <Icon as={icon} color="white" />
-        <Text color="white" fontWeight="bold" ml={2}>
-          {title}
-        </Text>
-      </Center>
+      <Link to="/login">
+        <Center>
+          <Icon as={icon} color="white" />
+          <Text color="white" fontWeight="bold" ml={2}>
+            {title}
+          </Text>
+        </Center>
+      </Link>
     );
   }
 );

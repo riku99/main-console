@@ -1,14 +1,21 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Stack, StackProps } from "@chakra-ui/react";
 
 type Props = {
   children: React.ReactNode;
-};
+} & StackProps;
 
-export const Section = React.memo(({ children }: Props) => {
+export const Section = React.memo(({ children, ...props }: Props) => {
   return (
-    <Box bg="white" boxShadow="md" padding={2} w="100%" h="100%">
+    <Stack
+      p={2}
+      shadow="md"
+      borderWidth="1px"
+      bg="white"
+      spacing={4}
+      {...props}
+    >
       {children}
-    </Box>
+    </Stack>
   );
 });

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Box, Button, Flex, HStack } from "@chakra-ui/react";
 
+import { RClient } from "./RClient";
+
 const SelectTargetButton = React.memo(
   ({
     isSelected,
@@ -44,6 +46,7 @@ export const Notifications = () => {
           />
         </HStack>
       </Flex>
+      <Box mt={8}>{selected === "r-client" && <RClient />}</Box>
     </>
   );
 };

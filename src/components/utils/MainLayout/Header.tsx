@@ -15,6 +15,7 @@ export const Header = React.memo(() => {
       pl={2}
       pr={2}
       justifyContent="space-between"
+      bg="white"
     >
       <Text>コンソール</Text>
       <Text color="gray">{email}</Text>

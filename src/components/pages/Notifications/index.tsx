@@ -46,7 +46,7 @@ export const Notifications = () => {
           />
         </HStack>
       </Flex>
-      <Box mt={8}>{selected === "r-client" && <RClient />}</Box>
+      <Box mt={5}>{selected === "r-client" && <RClient />}</Box>
     </>
   );
 };

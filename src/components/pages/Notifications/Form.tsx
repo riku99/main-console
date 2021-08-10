@@ -26,7 +26,7 @@ export const Form = React.memo(() => {
       </FormControl>
       <FormControl>
         <FormLabel mt={3}>本文</FormLabel>
-        <Textarea h="50vh" multiple />
+        <Textarea h="45vh" multiple />
       </FormControl>
       <Box mt={3}>
         <Text>日付</Text>

@@ -39,7 +39,7 @@ export const SideBar = React.memo(() => {
   const location = useLocation();
 
   return (
-    <Box h="100%" w="9%" bg="blue.300">
+    <Box minH="100vh" w="9%" bg="blue.300">
       <Center mt={styles.headerHeight} w="100%" display="block">
         <VStack spacing="20px">
           <MenuItem

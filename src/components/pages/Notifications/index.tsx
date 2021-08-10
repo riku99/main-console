@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Button, Flex, HStack } from "@chakra-ui/react";
 
 import { RClient } from "./RClient";
+import { Section } from "components/utils/Section";
 
 const SelectTargetButton = React.memo(
   ({
@@ -32,20 +33,22 @@ export const Notifications = () => {
 
   return (
     <>
-      <Flex>
-        <HStack spacing="10px">
-          <SelectTargetButton
-            isSelected={selected === "user"}
-            titile="ユーザー"
-            onClick={() => setSelected("user")}
-          />
-          <SelectTargetButton
-            isSelected={selected === "r-client"}
-            titile="Rクライアント"
-            onClick={() => setSelected("r-client")}
-          />
-        </HStack>
-      </Flex>
+      <Section>
+        <Flex>
+          <HStack spacing="10px">
+            <SelectTargetButton
+              isSelected={selected === "user"}
+              titile="ユーザー"
+              onClick={() => setSelected("user")}
+            />
+            <SelectTargetButton
+              isSelected={selected === "r-client"}
+              titile="Rクライアント"
+              onClick={() => setSelected("r-client")}
+            />
+          </HStack>
+        </Flex>
+      </Section>
       <Box mt={8}>{selected === "r-client" && <RClient />}</Box>
     </>
   );

@@ -20,3 +20,19 @@ export const useLogin = () => {
     loginWithGoogle,
   };
 };
+
+export const useIdToken = () => {
+  const getIdToken = useCallback(async () => {
+    const user = firebaseApp.auth().currentUser;
+
+    if (!user) return;
+
+    const idToken = await user.getIdToken();
+
+    return idToken;
+  }, []);
+
+  return {
+    getIdToken,
+  };
+};

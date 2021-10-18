@@ -6,6 +6,7 @@ import { Home } from "../components/pages/Home";
 import { Protected } from "./Protected";
 import { NotFound } from "components/pages/NotFound";
 import { Notifications } from "components/pages/Notifications";
+import { SignupToken } from "components/pages/SignupToken";
 
 export const Routes = () => {
   return (
@@ -18,6 +19,7 @@ export const Routes = () => {
               <Route exact path="/" component={Home} />
               <Route path="/home" component={Home} />
               <Route path="/notifications" component={Notifications} />
+              <Route path="/signup_token" component={SignupToken} />
               <Route component={NotFound} />
             </Switch>
           </MainLayout>

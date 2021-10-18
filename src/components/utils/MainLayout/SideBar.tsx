@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Center, VStack, Text } from "@chakra-ui/react";
 import { styles } from "styles";
 import { Icon } from "@chakra-ui/react";
-import { MdHome, MdNotifications } from "react-icons/md";
+import { MdHome, MdNotifications, MdVpnKey } from "react-icons/md";
 import { IconType } from "react-icons";
 import { Link, useLocation } from "react-router-dom";
 
@@ -53,6 +53,12 @@ export const SideBar = React.memo(() => {
             title="お知らせ"
             link="/notifications"
             seleceted={location.pathname.includes("notifications")}
+          />
+          <MenuItem
+            icon={MdVpnKey}
+            title="トークン"
+            link="/signup_token"
+            seleceted={location.pathname.includes("signup_token")}
           />
         </VStack>
       </Center>
